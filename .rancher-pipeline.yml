@@ -11,7 +11,7 @@ stages:
   steps:
   - runScriptConfig:
       image: node:latest
-      shellScript: sh "cd bin && chmod +x ./env-populate && ./env-populate && cd .. && cp .env.prod .env"
+      shellScript: "sh \"cd bin\" \nsh \"chmod +x ./env-populate\"\nsh \"./env-populate\"\ncd .. && cp .env.prod .env\n"
     envFrom:
     - sourceName: tobedressed
       sourceKey: CANONICAL_URL
