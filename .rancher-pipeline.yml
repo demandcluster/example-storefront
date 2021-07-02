@@ -14,7 +14,7 @@ stages:
       shellScript: |
         cd bin
         chmod +x ./env-populate
-        sh "./env-populate"
+        ./env-populate
         cd .. && cp .env.prod .env
     envFrom:
     - sourceName: tobedressed
