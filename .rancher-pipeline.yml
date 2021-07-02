@@ -7,7 +7,7 @@ stages:
   - runScriptConfig:
       image: node:alpine
       shellScript: yarn --silent && yarn test:ci
-- name: Build
+- name: Copy secrets
   steps:
   - runScriptConfig:
       image: node:latest
@@ -74,6 +74,8 @@ stages:
     - sourceName: tobedressed
       sourceKey: NEXT_BUILD_SEGMENT_ANALYTICS_SKIP_MINIMIZE
       targetKey: NEXT_PUBLIC_SEGMENT_ANALYTICS_SKIP_MINIMIZE
+- name: Build
+  steps:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
