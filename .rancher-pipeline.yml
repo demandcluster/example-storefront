@@ -66,6 +66,9 @@ stages:
     - sourceName: tobedressed
       sourceKey: NEXT_BUILD_SEGMENT_ANALYTICS_SKIP_MINIMIZE
       targetKey: NEXT_PUBLIC_SEGMENT_ANALYTICS_SKIP_MINIMIZE
+    - sourceName: tobedressed
+      sourceKey: STRIPE_PUBLIC_API_KEY
+      targetKey: STRIPE_PUBLIC_API_KEY
 - name: Build
   steps:
   - publishImageConfig:
