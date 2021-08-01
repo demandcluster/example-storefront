@@ -1,12 +1,4 @@
 stages:
-- name: Test
-  steps:
-  - runScriptConfig:
-      image: node:alpine
-      shellScript: yarn --silent && yarn type-check
-  - runScriptConfig:
-      image: node:alpine
-      shellScript: yarn --silent && yarn test:ci
 - name: Copy secrets
   steps:
   - runScriptConfig:
