@@ -9,64 +9,43 @@ stages:
         ./env-populate
         cd .. && cp .env.prod .env
     envFrom:
-    - sourceName: tobedressed
+    - sourceName: tbd-pipeline
       sourceKey: CANONICAL_URL
       targetKey: CANONICAL_URL
-    - sourceName: tobedressed
+    - sourceName: tbd-pipeline
       sourceKey: SESSION_SECRET
       targetKey: SESSION_SECRET
-    - sourceName: tobedressed
+    - sourceName: tbd-pipeline
       sourceKey: SESSION_MAX_AGE_MS
       targetKey: SESSION_MAX_AGE_MS
-    - sourceName: tobedressed
+    - sourceName: tbd-pipeline
       sourceKey: BUILD_GRAPHQL_URL
       targetKey: BUILD_GRAPHQL_URL
-    - sourceName: tobedressed
+    - sourceName: tbd-pipeline
       sourceKey: ENABLE_SPA_ROUTING
       targetKey: ENABLE_SPA_ROUTING
     - sourceName: tobedressed
       sourceKey: EXTERNAL_GRAPHQL_URL
       targetKey: EXTERNAL_GRAPHQL_URL
-    - sourceName: tobedressed
+    - sourceName: tbd-pipeline
       sourceKey: INTERNAL_GRAPHQL_URL
       targetKey: INTERNAL_GRAPHQL_URL
-    - sourceName: tobedressed
-      sourceKey: OAUTH2_ADMIN_PORT
-      targetKey: OAUTH2_ADMIN_PORT
-    - sourceName: tobedressed
-      sourceKey: OAUTH2_AUTH_URL
-      targetKey: OAUTH2_AUTH_URL
-    - sourceName: tobedressed
-      sourceKey: OAUTH2_CLIENT_ID
-      targetKey: OAUTH2_CLIENT_ID
-    - sourceName: tobedressed
-      sourceKey: OAUTH2_IDP_PUBLIC_CHANGE_PASSWORD_URL
-      targetKey: OAUTH2_IDP_PUBLIC_CHANGE_PASSWORD_URL
-    - sourceName: tobedressed
-      sourceKey: OAUTH2_IDP_HOST_URL
-      targetKey: OAUTH2_IDP_HOST_URL
-    - sourceName: tobedressed
-      sourceKey: OAUTH2_PUBLIC_LOGOUT_URL
-      targetKey: OAUTH2_PUBLIC_LOGOUT_URL
-    - sourceName: tobedressed
-      sourceKey: OAUTH2_TOKEN_URL
-      targetKey: OAUTH2_TOKEN_URL
-    - sourceName: tobedressed
+    - sourceName: tbd-pipeline
       sourceKey: SEGMENT_ANALYTICS_SKIP_MINIMIZE
       targetKey: SEGMENT_ANALYTICS_SKIP_MINIMIZE
-    - sourceName: tobedressed
+    - sourceName: tbd-pipeline
       sourceKey: SEGMENT_ANALYTICS_WRITE_KEY
       targetKey: SEGMENT_ANALYTICS_WRITE_KEY
-    - sourceName: tobedressed
+    - sourceName: tbd-pipeline
       sourceKey: PORT
       targetKey: PORT
-    - sourceName: tobedressed
+    - sourceName: tbd-pipeline
       sourceKey: NEXT_BUILD_SEGMENT_ANALYTICS_WRITE_KEY
       targetKey: NEXT_PUBLIC_SEGMENT_ANALYTICS_WRITE_KEY
-    - sourceName: tobedressed
+    - sourceName: tbd-pipeline
       sourceKey: NEXT_BUILD_SEGMENT_ANALYTICS_SKIP_MINIMIZE
       targetKey: NEXT_PUBLIC_SEGMENT_ANALYTICS_SKIP_MINIMIZE
-    - sourceName: tobedressed
+    - sourceName: tbd-pipeline
       sourceKey: STRIPE_PUBLIC_API_KEY
       targetKey: STRIPE_PUBLIC_API_KEY
 - name: Build
